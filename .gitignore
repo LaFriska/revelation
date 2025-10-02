@@ -1,3 +1,5 @@
 .vscode/*
 *.out
 src/*.o
+revelation
+/build/
