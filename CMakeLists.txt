@@ -21,6 +21,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE assets)
 
 if (LINUX)
     # Linux libs
+    message("Adding libraries for Linux.")
     target_link_libraries(${PROJECT_NAME} PRIVATE
             raylib
             GL
@@ -34,11 +35,13 @@ endif ()
 
 if (APPLE)
     # Linux libs
+    message("Adding libraries for Mac OS.")
     target_link_libraries(${PROJECT_NAME} PRIVATE
-            "-framework CoreVideo",
-            "-framework IOKit",
-            "-framework Cocoa",
-            "-framework GLUT",
+            raylib
+            "-framework CoreVideo"
+            "-framework IOKit"
+            "-framework Cocoa"
+            "-framework GLUT"
             "-framework OpenGL"
     )
 endif ()
